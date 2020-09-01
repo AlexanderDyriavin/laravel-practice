@@ -13,11 +13,11 @@ class DebugController extends Controller
 {
     public function generate()
     {
-        factory(Company::class,20);
-        factory(User::class,20);
-        factory(City::class,20);
-        factory(Event::class,20);
-        factory(Person::class,20);
+        factory(Company::class,20)->create();
+        factory(User::class,20)->create();
+        factory(City::class,20)->create();
+        factory(Event::class,20)->create();
+        factory(Person::class,20)->create();
 
         return response(['status'=> 'ok']);
 
