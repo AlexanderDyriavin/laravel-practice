@@ -18,7 +18,9 @@ class CreatePeopleTable extends Migration
 
             $table->string('first_name');
             $table->string('last_name');
+            $table->unsignedBigInteger('company_id');
 
+            $table->foreign('company_id')->on('companies')->references('id');
             $table->timestamps();
         });
     }
